@@ -18,6 +18,12 @@ ul li {
 .logo {
   float: left;
   padding: 25px;
+  height: 70px;
+  width: 70px;
+}
+
+.logo-container {
+  padding-bottom: 19px;
 }
 
 nav {
@@ -64,6 +70,18 @@ a:hover {
   max-height: 480px;
   margin: 0 auto; /* 居中显示 */
   overflow: hidden; /* 隐藏超出的内容 */
+}
+
+.carousel-title {
+  position: absolute;
+  top: 170px; /* 文字距离顶部 10px */
+  left: 50%;
+  transform: translateX(-50%); /* 使文字居中 */
+  font-size: 2em; /* 设置文字大小 */
+  color: white; /* 文字颜色 */
+  font-weight: bold; /* 文字加粗 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+  z-index: 10;
 }
 
 /* 轮播图内部容器 */
@@ -119,7 +137,7 @@ a:hover {
   width: 25%;
   height: 200px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #89b9ed;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -142,7 +160,7 @@ h3 {
 }
 
 .description {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

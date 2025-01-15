@@ -1,0 +1,158 @@
+body {
+  text-align: center;
+  background-color: #6cf;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  float: left;
+  margin: 0px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.logo {
+  float: left;
+  padding: 25px;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(79, 82, 227);
+  padding: 15px;
+}
+
+.nav-right {
+  float: right;
+  margin: -10px 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.btn {
+  border: 2px solid #007bff;
+  background-color: #6cf;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.body-container {
+  width: 70%;
+  background-color: white;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+}
+
+/* 轮播图容器 */
+.carousel {
+  width: 100%; /* 设置轮播图宽度为页面宽度 */
+  max-height: 480px;
+  margin: 0 auto; /* 居中显示 */
+  overflow: hidden; /* 隐藏超出的内容 */
+}
+
+/* 轮播图内部容器 */
+.carousel-inner {
+  display: flex; /* 水平排列图片 */
+  transition: transform 0.5s ease-in-out; /* 图片切换时的平滑过渡 */
+}
+
+/* 轮播图每张图片 */
+.carousel-item {
+  width: 100%; /* 每张图片占据容器的100%宽度 */
+  flex-shrink: 0; /* 防止图片缩小 */
+}
+
+/* 图片样式 */
+.carousel-item img {
+  width: 100%; /* 图片充满容器 */
+  height: auto;
+}
+
+/* 控制轮播图按钮 */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 25%;
+  height: 200px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 动态效果：鼠标滑动到卡片时，卡片稍微放大 */
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* 鼠标滑动到卡片时，显示描述 */
+.card:hover .description {
+  opacity: 1;
+  visibility: visible;
+}
